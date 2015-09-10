@@ -1,6 +1,6 @@
 # Wagu
 Wagu helps you to present your data (text) in tables and blocks.
-I've add some examples [here](https://github.com/thedathoudarya/wagu/tree/wagu-branch/examples) to show how Wagu makes your life easy on above manner. Following are some of the examples in terminal-outputs with its code. I will add more examples eventually, to show you how to handle Wagu in various ways to build your text according to your own desire.
+I've add some examples [here](https://github.com/thedathoudarya/wagu/tree/wagu-branch/examples) to show how Wagu makes your life easy on above manner. Following are some of the examples in terminal-outputs with relavent code. I will add more examples eventually, to show you how to handle Wagu in various ways to build your text according to your own desire.
 ## Example 1 - Terminal Output
 ```sh
 +--------------+--------------+--------------+--------------+-------------+
