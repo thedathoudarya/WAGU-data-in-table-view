@@ -36,7 +36,7 @@ public final class Table {
 
     public final static int GRID_NON = 13;
 
-    public final static int GRID_CELL = 14;
+    public final static int GRID_FULL = 14;
 
     public final static int GRID_COLUMN = 15;
 
@@ -178,7 +178,7 @@ public final class Table {
     }
 
     public Table setGridMode(int gridMode) {
-        if (gridMode == GRID_NON || gridMode == GRID_CELL || gridMode == GRID_COLUMN) {
+        if (gridMode == GRID_NON || gridMode == GRID_FULL || gridMode == GRID_COLUMN) {
             this.gridMode = gridMode;
         } else {
             throw new RuntimeException("Invalid grid mode. " + gridMode + " given.");

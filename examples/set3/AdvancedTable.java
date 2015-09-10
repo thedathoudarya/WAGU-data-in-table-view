@@ -49,7 +49,7 @@ public class AdvancedTable {
                 Arrays.asList("Bernie","Berube")
         );
         Table nameTable = new Table(board, 31, nameTableHeadersList, nameTableRowsList, nameTableHeadersWidth);
-        nameTable.setGridMode(Table.GRID_CELL);
+        nameTable.setGridMode(Table.GRID_FULL);
         board.appendTableTo(1, Board.APPEND_BELOW, nameTable);
 
         Block gradeOne = new Block(board, 43, 1,"ONE");
@@ -74,7 +74,7 @@ public class AdvancedTable {
         );
         List<Integer> figuresColWidthsList = Arrays.asList(10, 10, 10, 10);
         Table figuresTable = new Table(board, 43, subjects, figures, figuresColWidthsList);
-        figuresTable.setGridMode(Table.GRID_CELL);
+        figuresTable.setGridMode(Table.GRID_FULL);
         board.appendTableTo(24, Board.APPEND_BELOW, figuresTable);
 
         figures = Arrays.asList(

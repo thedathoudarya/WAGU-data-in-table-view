@@ -43,7 +43,7 @@ public class D {
         System.out.println(preview1);
 
         List<Integer> colWidthsListEdited = Arrays.asList(24, 13, 6, 13, 13);
-        table.invalidate().setGridMode(Table.GRID_CELL).setColWidthsList(colWidthsListEdited);
+        table.invalidate().setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
         String preview2 = board.invalidate().setInitialBlock(table.tableToBlocks()).build().getPreview();
         System.out.println("TABLE EXAMPLE 2");
         System.out.println(preview2);

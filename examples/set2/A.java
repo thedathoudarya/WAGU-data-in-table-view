@@ -31,7 +31,6 @@ public class A {
                 Arrays.asList("Alyse", "Female", "No", "26", "7000.89"),
                 Arrays.asList("Venessa", "Female", "No", "22", "100700.50")
         );
-
         Board board = new Board(75);
         String tableString = board.setInitialBlock(new Table(board, 75, headersList, rowsList).tableToBlocks()).build().getPreview();
         System.out.println(tableString);

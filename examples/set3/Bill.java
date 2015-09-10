@@ -95,9 +95,9 @@ public class Bill {
         b.getBlock(19).setBelowBlock(summaryBlock);
         Block summaryValBlock = new Block(b, 12, 9, summaryVal).allowGrid(false).setDataAlign(Block.DATA_MIDDLE_RIGHT);
         summaryBlock.setRightBlock(summaryValBlock);
-        Block sign1Block = new Block(b, 24, 9,sign1).setDataAlign(Block.DATA_BOTTOM_MIDDLE).allowGrid(false);
+        Block sign1Block = new Block(b, 24, 7,sign1).setDataAlign(Block.DATA_BOTTOM_MIDDLE).allowGrid(false);
         summaryBlock.setBelowBlock(sign1Block);
-        sign1Block.setRightBlock(new Block(b, 24, 9,sign2).setDataAlign(Block.DATA_BOTTOM_MIDDLE).allowGrid(false));
+        sign1Block.setRightBlock(new Block(b, 24, 7,sign2).setDataAlign(Block.DATA_BOTTOM_MIDDLE).allowGrid(false));
         sign1Block.setBelowBlock(new Block(b, 48, 3,advertise).setDataAlign(Block.DATA_CENTER).allowGrid(false));
         //b.showBlockIndex(true);
         System.out.println(b.invalidate().build().getPreview());

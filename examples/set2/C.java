@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package examples.set2;
 
 import wagu.Block;
@@ -36,15 +35,17 @@ public class C {
         Board board = new Board(75);
         Table table = new Table(board, 75, headersList, rowsList);
         table.setGridMode(Table.GRID_COLUMN);
+        //setting width and data-align of columns
         List<Integer> colWidthsList = Arrays.asList(14, 14, 13, 14, 14);
-        table.setColWidthsList(colWidthsList);
         List<Integer> colAlignList = Arrays.asList(Block.DATA_CENTER, Block.DATA_CENTER, Block.DATA_CENTER, Block.DATA_CENTER, Block.DATA_CENTER);
+        table.setColWidthsList(colWidthsList);
         table.setColAlignsList(colAlignList);
+        
         Block tableBlock = table.tableToBlocks();
         board.setInitialBlock(tableBlock);
         board.build();
         String tableString = board.getPreview();
         System.out.println(tableString);
     }
-    
+
 }
