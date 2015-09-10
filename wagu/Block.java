@@ -14,9 +14,9 @@ import java.util.Objects;
  * @author Thedath Oudarya
  */
 public final class Block {
-    
+
     private static int nextIndex = 0;
-    
+
     private Board board;
 
     private final int index;
@@ -100,12 +100,12 @@ public final class Block {
         this(board, width, height, data);
         if (rightBlock != null) {
             rightBlock.setX(getX() + getWidth() + (isGridAllowed() ? 1 : 0));
-            rightBlock.setY(getY());            
+            rightBlock.setY(getY());
             this.rightBlock = rightBlock;
         }
         if (belowBlock != null) {
             belowBlock.setX(getX());
-            belowBlock.setY(getY() + getHeight() + (isGridAllowed() ? 1 : 0));            
+            belowBlock.setY(getY() + getHeight() + (isGridAllowed() ? 1 : 0));
             this.belowBlock = belowBlock;
         }
     }
@@ -207,7 +207,7 @@ public final class Block {
     public Block setRightBlock(Block rightBlock) {
         if (rightBlock != null) {
             rightBlock.setX(getX() + getWidth() + (isGridAllowed() ? 1 : 0));
-            rightBlock.setY(getY());            
+            rightBlock.setY(getY());
             this.rightBlock = rightBlock;
         }
         return this;
@@ -220,7 +220,7 @@ public final class Block {
     public Block setBelowBlock(Block belowBlock) {
         if (belowBlock != null) {
             belowBlock.setX(getX());
-            belowBlock.setY(getY() + getHeight() + (isGridAllowed() ? 1 : 0));            
+            belowBlock.setY(getY() + getHeight() + (isGridAllowed() ? 1 : 0));
             this.belowBlock = belowBlock;
         }
         return this;
@@ -259,7 +259,7 @@ public final class Block {
             String[] lines = data.split("\n");
             List<String> dataInLines = new ArrayList<>();
             if (board.showBlockIndex) {
-                dataInLines.add("i = "+index);
+                dataInLines.add("i = " + index);
             }
             for (String line : lines) {
                 if (getHeight() > dataInLines.size()) {
@@ -283,13 +283,13 @@ public final class Block {
                     }
                 }
             }
-            
+
             for (int i = 0; i < dataInLines.size(); i++) {
                 if (dataInLines.remove("")) {
                     i--;
                 }
             }
-            
+
             int givenAlign = getDataAlign();
             int dataStartingLineIndex = -1;
             int additionalHeight = (isGridAllowed() ? 1 : 0);
@@ -301,7 +301,7 @@ public final class Block {
                 dataStartingLineIndex = iy + additionalHeight + (getHeight() - dataInLines.size());
             }
             int dataEndingLineIndex = dataStartingLineIndex + dataInLines.size();
-            
+
             int extendedIX = ix + getWidth() + (isGridAllowed() ? 2 : 0);
             int extendedIY = iy + getHeight() + (isGridAllowed() ? 2 : 0);
             int startingIX = ix;
@@ -351,11 +351,11 @@ public final class Block {
                     }
                 }
                 ix = startingIX;
-            }            
+            }
         }
         return this;
     }
-    
+
     protected List<Charr> getChars() {
         return this.charrsList;
     }
@@ -392,27 +392,27 @@ public final class Block {
         }
         return preview;
     }
-    
-    public Block getMostRightBlock(){
+
+    public Block getMostRightBlock() {
         return getMostRightBlock(this);
     }
-    
-    private Block getMostRightBlock(Block block){
+
+    private Block getMostRightBlock(Block block) {
         if (block.getRightBlock() == null) {
             return block;
-        }else{
+        } else {
             return getMostRightBlock(block.getRightBlock());
         }
     }
-    
-    public Block getMostBelowBlock(){
+
+    public Block getMostBelowBlock() {
         return getMostBelowBlock(this);
     }
-    
-    private Block getMostBelowBlock(Block block){
+
+    private Block getMostBelowBlock(Block block) {
         if (block.getBelowBlock() == null) {
             return block;
-        }else{
+        } else {
             return getMostBelowBlock(block.getBelowBlock());
         }
     }
