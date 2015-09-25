@@ -15,7 +15,7 @@ import java.util.Objects;
  */
 public final class Block {
 
-    private static int nextIndex = 0;
+    protected static int nextIndex = 0;
 
     private Board board;
 
