@@ -13,7 +13,7 @@ import java.util.List;
  * @author Thedath Oudarya
  */
 public class Board {
-    
+
     protected boolean showBlockIndex;
 
     protected int boardWidth;
@@ -47,7 +47,7 @@ public class Board {
 
     public void showBlockIndex(boolean showBlockIndex) {
         this.showBlockIndex = showBlockIndex;
-    }        
+    }
 
     public Board appendTableTo(int appendableBlockIndex, int appendableDirection, Table table) {
         Block tableBlock = table.tableToBlocks();
